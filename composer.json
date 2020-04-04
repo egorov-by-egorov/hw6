@@ -1,0 +1,14 @@
+{
+    "name": "egorov/hw5",
+    "license": "",
+    "require": {
+        "fzaninotto/faker": "^1.9",
+        "twig/twig": "^2.12",
+        "intervention/image": "^2.5",
+        "illuminate/database": "^5.8"
+    },
+    "autoload": {
+        "psr-4": {
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<form name="upload" action="image" method="POST" ENCTYPE="multipart/form-data">
+    Выберите файл для загрузки:<br>
+    <br>
+    <input type="file" name="image"><br>
+    <br>
+    <input type="submit" name="upload" value="Загрузить">
+</form>
+<br>
+<?php
+if (!empty($object->data->errors)) {
+    echo "<br>" . $object->data->errors . "<br>";
+}
+if (!empty($object->data->successful)) {
+    echo "<br>" . $object->data->successful . "<br>";
+}
+?>
+<br>
+<a href="user">К профилю</a>

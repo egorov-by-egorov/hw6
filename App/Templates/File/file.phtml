@@ -1,0 +1,30 @@
+<form action="file" method="post" style="float: right;">
+    <input type="submit" value="отсортировать по возрасту:сначала старые" name="ssort">
+</form>
+<form action="file" method="post" style="float: right;">
+    <input type="submit" value="отсортировать по возрасту:сначала молодые" name="msort">
+</form>
+<a href="../index/index" style="display:block;float: right">Назад</a>
+
+<?php
+if (isset($_POST['submit'])) {
+    foreach ($object->data->upload as $value) {
+        echo $value->file . '<br>';
+    }
+
+    echo '<br><button onclick="history.back();">Назад</button>';
+} else {
+
+    foreach ($object->data->information as $value) {
+        printf("
+    <form method='post' action='file' >
+    <p>Пользователь: %s id: %s Возраст: %s Совершеннолетний ли: %s </a><br></p>
+    <input type='hidden' name='idFile' value='%s'>
+    <input type='submit' name='submit' value='Получить список файлов загруженных пользователем'>
+    </form>",
+            $value["1"], $value["0"], $value['2'], $value['3'], $value['0']);
+    }
+}
+?>
+
+
